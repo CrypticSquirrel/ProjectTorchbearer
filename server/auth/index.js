@@ -88,7 +88,7 @@ router.post('/login', (req, res, next) => {
                             jwt.sign(
                                 payload,
                                 process.env.TOKEN_SECRET,
-                                { expiresIn: '1h' },
+                                { expiresIn: '1d' },
                                 (err, token) => {
                                     if (err) {
                                         res.status(401);

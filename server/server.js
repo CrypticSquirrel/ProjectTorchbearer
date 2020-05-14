@@ -2,17 +2,26 @@
 
 const express = require('express');
 const auth = require('./auth');
+const middlewares = require('./auth/middlewares');
+require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+/* ----------------------------------------- Middleware ----------------------------------------- */
 
 app.use(express.json());
-
-/* ---------------------------------------- Basic Routes ---------------------------------------- */
-
-app.get('/', (req, res) => res.send('☃︎'));
-
+app.use(middlewares.checkTokenSetUser);
 app.use('/auth', auth);
+
+/* -------------------------------------- For Testing Only -------------------------------------- */
+
+app.get('/', (req, res) => {
+    res.json({
+        message: 'check if user exists',
+        user: req.user,
+    });
+});
 
 /* --------------------------------------- Error Handling --------------------------------------- */
 
@@ -33,6 +42,6 @@ function errorHandler(err, req, res, next) {
 app.use(notFound);
 app.use(errorHandler);
 
-/* -------------------------------------- Listen on a port -------------------------------------- */
+/* ------------------------------------------ Start App ----------------------------------------- */
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
