@@ -19,7 +19,7 @@ app.use('/auth', auth);
 app.get('/', (req, res) => {
     res.json({
         message: 'check if user exists',
-        user: req.user,
+        user: req.user
     });
 });
 
@@ -35,7 +35,7 @@ function errorHandler(err, req, res, next) {
     res.status(res.statusCode || 500);
     res.json({
         message: err.message,
-        stack: err.stack,
+        stack: err.stack
     });
 }
 
