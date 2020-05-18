@@ -8,28 +8,31 @@
 	
 	<body>
 		
-		<div class = "loginbox">
+		<div class = "infobox">
 		
-		<img src="user-icon.png" class="icon">
-			<h1> Login Here</h1>
+		<img src="images/user-icon.png" class="icon">
+			<h1> Sign In</h1>
 			<form> 
 			
 				<p> Username</p>
-				<input type = "text" name="" placeholder="Enter Username">
+				<input type = "text" id="username" placeholder="Enter Username">
 				
 				<p>Password</p>
-				<input type = "password" name="" placeholder = "Enter Password">
+				<input type = "password" id="pwd" placeholder = "Enter Password">
 				
-				<input type = "submit" name="" value="Login">
+				<input type = "submit" value="Login" onclick = "getloginvalues()"/>
 				
 				<a href = "#"> Lost your Password </a> <br>
-				<a href="#"> Don't have an Account? </a>
+				<a href="signup.html"> Don't have an Account? <b>Sign Up Here. </b></a>
 				
 				
 			</form>
 			
 		</div>
 	
+	<script src = "scripts/jquery-3.5.1.js"></script>
+	<script src = "scripts/script.js"> </script>
+		
 	</body>
 	
 	</head>

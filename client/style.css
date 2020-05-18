@@ -1,14 +1,14 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: url(bck-img.jpg);
+	background: url(images/bck-img.jpg);
 	background-size: cover;
 	background-position: center;
 	background-color: #e8edef;
 	font-family: sans-serif;
 }
 
-.loginbox {
+.infobox {
 	width: 320px;
 	height: 420px;
 	background: #333533;
@@ -42,31 +42,31 @@ h1 {
 	
 }
 
-.loginbox p {
+.infobox p {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
 	
 }
 
-.loginbox input {
+.infobox input {
 	width: 100%;
 	margin-bottom: 20px;
 }
 
-.loginbox input[type = "text"], input[type="password"]
+.infobox input[type = "text"], input[type="password"]
 {
 	border:none;
 	border-bottom:1px solid #fff;
 	background: transparent;
 	outline: none;
 	height: 40px;
-	color: black;
+	color: white;
 	font-size: 16px;
 	
 }
 
-.loginbox input[type="submit"] {
+.infobox input[type="submit"] {
 	
 	border:none;
 	outline: none;
@@ -77,13 +77,13 @@ h1 {
 	border-radius: 20px;
 }
 
-.loginbox input[type="submit"]:hover {
+.infobox input[type="submit"]:hover {
 	cursor: pointer;
 	background: #cfdbd5;
 	color: #000;
 }
 
-.loginbox a {
+.infobox a {
 	
 	text-decoration:none;
 	font-size: 12px;
@@ -91,7 +91,7 @@ h1 {
 	color:#e8edef;
 }
 
-.loginbox a:hover {
+.infobox a:hover {
 	
 	color: #f5cb5c;
 }
