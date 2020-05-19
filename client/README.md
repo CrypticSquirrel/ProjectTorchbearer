@@ -21,12 +21,15 @@ I use prettier as my default formatter. If you download the vscode extension, yo
     "prettier.tabWidth": 4,
 }
 ```
-- More VSCode hax: I hate the minimap and never use open editors so I disabled them.
+- More VSCode hax: I hate the minimap and never use open editors so I disabled them. Statusbar, titlebar, and activity bar can be disabled too.
 - [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro) is my favorite
 ```JSON
 {
+    "window.titleBarStyle": "custom",
     "explorer.openEditors.visible": false,
     "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
     "editor.fontFamily": "Anonymous Pro",
 }
 ```
