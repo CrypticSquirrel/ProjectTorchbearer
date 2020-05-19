@@ -2,7 +2,10 @@
 $(document).ready(function() {
 	alert("jquery loaded");
 }); */
-
+$(document).ready(function() {
+	getloginvalues();
+	getsignupvalues(); 
+}); 
 //element selectors
 function getloginvalues() {
 	var username = $("#username").val();
