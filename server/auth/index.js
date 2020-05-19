@@ -14,15 +14,8 @@ users.createIndex('username', { unique: true });
 /* ----------------------------------------- Validation ----------------------------------------- */
 
 const schema = Joi.object({
-    username: Joi.string()
-        .alphanum()
-        .min(2)
-        .max(30)
-        .required(),
-    password: Joi.string()
-        .trim()
-        .min(4)
-        .required(),
+    username: Joi.string().alphanum().min(2).max(30).required(),
+    password: Joi.string().trim().min(4).required(),
     repeat_password: Joi.ref('password'),
 });
 
@@ -41,7 +34,7 @@ router.post('/signup', (req, res, next) => {
             .findOne({
                 username: value.username,
             })
-            .then(user => {
+            .then((user) => {
                 if (user) {
                     const duplicate = new Error(
                         'That username is already taken. Please choose another one.'
@@ -49,12 +42,12 @@ router.post('/signup', (req, res, next) => {
                     res.status(409);
                     next(duplicate);
                 } else {
-                    bcrypt.hash(value.password.trim(), 10, function(err, hash) {
+                    bcrypt.hash(value.password.trim(), 10, function (err, hash) {
                         const newUser = {
                             username: value.username,
                             password: hash,
                         };
-                        users.insert(newUser).then(insertedUser => {
+                        users.insert(newUser).then((insertedUser) => {
                             delete insertedUser.password;
                             res.json(insertedUser);
                         });
@@ -77,9 +70,9 @@ router.post('/login', (req, res, next) => {
             .findOne({
                 username: value.username,
             })
-            .then(user => {
+            .then((user) => {
                 if (user) {
-                    bcrypt.compare(value.password, user.password).then(result => {
+                    bcrypt.compare(value.password, user.password).then((result) => {
                         if (result) {
                             const payload = {
                                 _id: user._id,
@@ -110,7 +103,6 @@ router.post('/login', (req, res, next) => {
                     next(loginError);
                 }
             });
-        // test
     } else {
         res.status(401);
         next(loginError);
