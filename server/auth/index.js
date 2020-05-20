@@ -42,14 +42,16 @@ router.post('/signup', (req, res, next) => {
                     res.status(409);
                     next(duplicate);
                 } else {
-                    bcrypt.hash(value.password.trim(), 10, function (err, hash) {
+                    bcrypt.hash(value.password.trim(), 10, (err, hash) => {
                         const newUser = {
                             username: value.username,
                             password: hash,
                         };
                         users.insert(newUser).then((insertedUser) => {
-                            delete insertedUser.password;
-                            res.json(insertedUser);
+                            const jwtPayload = {
+                                token: insertedUser.password,
+                            };
+                            res.json(jwtPayload);
                         });
                     });
                 }
