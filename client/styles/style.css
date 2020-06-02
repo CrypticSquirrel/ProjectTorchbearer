@@ -1,11 +1,35 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: url(../images/bck-img.jpg);
 	background-size: cover;
 	background-position: center;
-	background-color: #e8edef;
+	background-color: #e8eddf;
 	font-family: sans-serif;
+}
+
+.row1 {
+	margin: 2px 0;
+}
+.col1 {
+	position: relative;
+	transform: translate(0%, 25%);
+	margin-top: 5%;
+	width: 30rem;
+}
+
+
+.heading {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 72px;
+	font-weight: bold;
+}
+
+.tagline {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	font-weight: normal;
+	
 }
 
 .infobox {
@@ -17,6 +41,20 @@ body {
 	left:50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	
+	padding: 70px 30px;	
+}
+
+.col2 {
+	width: 320px;
+	height: 420px;
+	background: #333533;
+	color: #e8eddf;
+	top: 50%;
+	left:50%;
+	position: absolute;
+	transform: translate(50%, -50%);
 	box-sizing: border-box;
 	
 	padding: 70px 30px;	
