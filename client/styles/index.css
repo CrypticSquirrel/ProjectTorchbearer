@@ -1,25 +1,35 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: url(../images/bck-img.jpg);
 	background-size: cover;
 	background-position: center;
-	background-color: #e8edef;
-	font-family: sans-serif;
+	background-color: #e8eddf;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.infobox {
-	width: 320px;
-	height: 420px;
-	background: #333533;
-	color: #e8eddf;
-	top: 50%;
-	left:50%;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	box-sizing: border-box;
+.row1 {
+	margin: 2px 0;
+}
+.col1 {
+	position: relative;
+	transform: translate(15%, 25%);
+	margin-top: 5%;
+	width: 33rem;
+}
+
+
+.heading {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 72px;
+	text-transform: uppercase;
+}
+
+.tagline {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	font-weight: normal;
 	
-	padding: 70px 30px;	
 }
 
 .icon {
@@ -40,6 +50,22 @@ h1 {
 	font-size: 22px;
 	
 }
+
+.infobox {
+	width: 320px;
+	height: 420px;
+	background: #333533;
+	color: #e8eddf;
+	top: 50%;
+	left:50%;
+	position: absolute;
+	transform: translate(50%, -50%);
+	box-sizing: border-box;
+	
+	padding: 70px 30px;	
+}
+
+
 
 .infobox p {
 	margin: 0;
@@ -94,3 +120,8 @@ h1 {
 	
 	color: #f5cb5c;
 }
+
+li {
+	margin-right: 40px;
+}
+

@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	background-color: #e8eddf;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 80px;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+
+.cardcontainer {
+    padding-top: 5px;   
+}
+
+.col {
+    margin-left: 5px;
+    margin-right:5px;
+    background-color: #f5cb5c;
+    border-radius: 5px;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-title {
+    font-weight: bold;
+    color: black;
+}
+
+.addcard {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333533;
+}
