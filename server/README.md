@@ -2,6 +2,12 @@
 
 This README purpose is to help developers get their local developement environment up and running with this app's server.
 
+ERD
+--
+
+![ ](https://github.com/CrypticSquirrel/ProjectTorchbearer/blob/master/server/Torch_ERD.png)
+
+
 Prerequisites
 --
 
